@@ -1,99 +1,101 @@
 //A Pattern
-function APattern(){
-    var string_toPrint="";
-    for(var i=1;i<=9; i++){
-       if(i === 1){
-        for(var k=1;k<=1;k++){
-             string_toPrint+=" ";
+function APattern(no_of_rows){
+     var string_toPrint="";
+     for(var i=1;i<=no_of_rows; i++){
+        if(i === 1){
+         for(var k=1;k<=1;k++){
+              string_toPrint+=" ";
+         }
+         for(var j=1;j<=no_of_rows;j++){
+              string_toPrint+="*";
+         }
+          string_toPrint+="\n";
         }
-        for(var j=1;j<=9;j++){
-             string_toPrint+="*";
+        else if(i === Math.round(no_of_rows/2)){
+         for(var j=1;j<=no_of_rows+2;j++){
+              string_toPrint+="*";
+         }
+          string_toPrint+="\n";
         }
-         string_toPrint+="\n";
-       }
-       else if(i===5){
-        for(var j=1;j<=11;j++){
-             string_toPrint+="*";
+        else{
+          string_toPrint+="*";
+         for(var k=1;k<=no_of_rows;k++){
+              string_toPrint+=" ";
+         }
+          string_toPrint+="*";
+          string_toPrint+="\n";
         }
-         string_toPrint+="\n";
-       }
-       else{
-         string_toPrint+="*";
-        for(var k=1;k<=9;k++){
-             string_toPrint+=" ";
-        }
-         string_toPrint+="*";
-         string_toPrint+="\n";
-       }
-    }
-    console.log(string_toPrint)
+     }
+     console.log(string_toPrint)
 }
+APattern(9);
 
 //B Pattern
-function Bpattern(){
-    var string_toPrint="";
-    for(var i=1;i<=9; i++){
-     if(i === 1){
-      for(var k=1;k<=1;k++){
-        //    string_toPrint+=" ";
-      }
-      for(var j=1;j<=10;j++){
-           string_toPrint+="*";
-      }
-       string_toPrint+="\n";
-     }
-     else if(i===5){
-      for(var j=1;j<=10;j++){
-           string_toPrint+="*";
-      }
-       string_toPrint+="\n";
-     }
-     else if(i===9){
-        for(var k=1;k<=1;k++){
-          //    string_toPrint+=" ";
-        }
-        for(var j=1;j<=10;j++){
-             string_toPrint+="*";
-        }
-         string_toPrint+="\n";
+function Bpattern(no_of_rows){
+     var string_toPrint="";
+     for(var i=1;i<=no_of_rows; i++){
+      if(i === 1){
+       for(var k=1;k<=1;k++){
+         //    string_toPrint+=" ";
        }
-     else{
-       string_toPrint+="*";
-      for(var k=1;k<=9;k++){
-           string_toPrint+=" ";
+       for(var j=1;j<=no_of_rows+1;j++){
+            string_toPrint+="*";
+       }
+        string_toPrint+="\n";
       }
-       string_toPrint+="*";
-       string_toPrint+="\n";
-     }
-  }
-  console.log(string_toPrint)
+      else if(i=== Math.round(no_of_rows/2)){
+       for(var j=1;j<=no_of_rows+1;j++){
+            string_toPrint+="*";
+       }
+        string_toPrint+="\n";
+      }
+      else if(i===no_of_rows){
+         for(var k=1;k<=1;k++){
+           //    string_toPrint+=" ";
+         }
+         for(var j=1;j<=no_of_rows+1;j++){
+              string_toPrint+="*";
+         }
+          string_toPrint+="\n";
+        }
+      else{
+        string_toPrint+="*";
+       for(var k=1;k<=no_of_rows;k++){
+            string_toPrint+=" ";
+       }
+        string_toPrint+="*";
+        string_toPrint+="\n";
+      }
+   }
+   console.log(string_toPrint)
 }
+Bpattern(9);
 
 //C Pattern
-function Cpattern(){
+function Cpattern(no_of_rows){
     var string_toPrint="";
-    for(var i=1;i<=9; i++){
+    for(var i=1;i<=no_of_rows; i++){
      if(i === 1){
       for(var k=1;k<=1;k++){
            string_toPrint+=" ";
       }
-      for(var j=1;j<=9;j++){
+      for(var j=1;j<=no_of_rows;j++){
            string_toPrint+="*";
       }
        string_toPrint+="\n";
      }
-     else if(i===9){
+     else if(i===no_of_rows){
           for(var k=1;k<=1;k++){
               string_toPrint+=" ";
           }
-          for(var j=1;j<=9;j++){
+          for(var j=1;j<=no_of_rows;j++){
                string_toPrint+="*";
           }
            string_toPrint+="\n";
          }
      else{
        string_toPrint+="*";
-      for(var k=1;k<=9;k++){
+      for(var k=1;k<=no_of_rows;k++){
            string_toPrint+=" ";
       }
      
@@ -102,6 +104,4 @@ function Cpattern(){
   }
   console.log(string_toPrint)
 }
-APattern();
-Bpattern();
-Cpattern();
+Cpattern(9);
